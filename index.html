@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>Google Web Page Design</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-image: url(image1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: fade 17s infinite;
+        text-decoration: none;
+    }
+    
+    @keyframes fade {
+        25% {
+            background-image: url(image3.png);
+        }
+        50% {
+            background-image: url(image4.png);
+        }
+        75% {
+            background-image: url(image2.png);
+        }
+        100% {
+            background-image: url(image1.png);
+        }
+    }
+    
+    .body {
+        background-color: rgba(0, 0, 0, 0.500);
+        /* padding-bottom: 200px; */
+    }
+    
+    header {
+        background-color: white;
+        padding: 3px 0px;
+        display: flex;
+        align-items: center;
+    }
+    
+    header h1 {
+        margin-left: 30px;
+    }
+    
+    .header-group {
+        display: flex;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+    
+    .btn1 {
+        margin: 0px 20px;
+        position: relative;
+    }
+    
+    .btn1 button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    
+    .btn1 label {
+        display: block;
+        margin: auto;
+        margin-left: -5px;
+        text-align: center;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.76);
+        padding: 7px 10px;
+        /* width: 40px; */
+        color: white;
+        font-size: 13px;
+        border-radius: 10px;
+        transform: translateY(8px);
+        transition: all .5s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .btn1:hover label {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(4px);
+    }
+    
+    .welcome {
+        width: 200px;
+        margin-left: 40px;
+        margin-top: 30px;
+        background-color: #ffffffad;
+        padding: 0px 10px;
+        border-radius: 30px;
+    }
+    
+    .welcome2 {
+        width: 200px;
+        margin-left: 40px;
+        margin-top: 30px;
+        background-color: #ffffffad;
+        padding: 0px 10px;
+        border-radius: 30px;
+        display: none;
+    }
+    
+    .welcome p {
+        font-weight: bold;
+        display: block;
+    }
+    
+    .welcome2 p {
+        font-weight: bold;
+        display: block;
+    }
+    
+    .body-text {
+        width: fit-content;
+        display: block;
+        margin: auto;
+        margin-top: -60px;
+    }
+    
+    .body-text h1 {
+        font-size: 110px;
+        font-weight: 900;
+        margin-top: 20px;
+        font-family: sans-serif;
+        letter-spacing: -6px;
+        text-shadow: 2px 4px 2px white;
+    }
+    
+    .search-area {
+        width: 510px;
+        display: block;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        margin-top: -30px;
+    }
+    
+    .input-group {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 4px;
+        padding-left: 15px;
+        padding-right: 13px;
+        transition: all .3s;
+    }
+    
+    #input-group {
+        transition: all .3s;
+    }
+    
+    .search-area input {
+        padding: 10px;
+        width: 50px;
+        transition: all .3s;
+        animation: moveOut 7s linear;
+        /* animation: moveBack 7s linear; */
+        background-color: #fff;
+        border: none;
+        font-size: 18px;
+    }
+    /* @keyframes moveOut {
+        width: ""
+    }
+     */
+    
+    .search-area button {
+        padding: 10px;
+        background-color: #fff;
+        border: none;
+        height: 41px;
+        width: 41px;
+        font-size: 16px;
+        animation: color 6s infinite;
+    }
+    
+    .bar #label-bar {
+        display: none;
+        margin: auto;
+        position: absolute;
+        margin-top: 10px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.692);
+        color: white;
+        padding: 4px 10px;
+        font-size: 12px;
+        transition: all .2s;
+    }
+    
+    .bar button label:hover {
+        cursor: pointer;
+    }
+    
+    .bar button label:hover .search-label {
+        visibility: visible;
+    }
+    
+    @keyframes color {
+        25% {
+            color: rgb(14, 131, 177);
+        }
+        50% {
+            color: green;
+        }
+        75% {
+            color: red;
+        }
+    }
+    
+    @media screen and (max-width: 720px) {
+        header h1 {
+            text-align: center;
+            font-size: 23px;
+        }
+        header .btn1 {
+            display: none;
+        }
+        .body-text h1 {
+            font-size: 55px;
+            margin-top: 100px;
+        }
+        .search-area {
+            width: 310px;
+            margin-top: 30px;
+        }
+        .welcome {
+            display: none;
+        }
+        .welcome2 {
+            display: block;
+            margin: auto;
+            background-color: black;
+            border-radius: 0;
+            text-align: center;
+            width: 80%;
+            color: #fff;
+        }
+        .welcome p {
+            color: white;
+        }
+        .hold1 button {
+            width: 20px;
+        }
+        .web-area .hold1 a {
+            font-size: 10px;
+        }
+        .body .custom-hold {
+            display: block;
+            margin: auto;
+            margin-top: 40px;
+        }
+        footer .foot-group p {
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        footer .foot-group .btn-hold {
+            display: block;
+            margin: auto;
+        }
+    }
+    
+    .custom-hold {
+        background-color: #fff;
+        padding: 10px 15px;
+        width: fit-content;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+    
+    .web-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .web-area .hold1 {
+        padding: 15px 5px;
+        padding-top: 10px;
+        border-radius: 20px;
+        width: 100px;
+        transition: all .3s;
+        margin: 0px 10px;
+        text-decoration: none;
+    }
+    
+    .web-area .hold1:hover {
+        background-color: #ffffff60;
+        cursor: pointer;
+    }
+    
+    .web-area .hold1 button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        padding: 5px;
+    }
+    
+    .web-area .hold1 a {
+        color: white;
+        text-shadow: 1px 1px 10px black;
+        text-decoration: none;
+        display: block;
+    }
+    
+    footer {
+        margin-top: 30px;
+        background-color: rgb(233, 224, 207);
+        padding: 10px 0px;
+    }
+    
+    .foot-group {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .foot-group p {
+        margin-left: 20px;
+    }
+    
+    .foot-group .btn-hold {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    
+    .btn-hold button {
+        height: 30px;
+        width: 30px;
+        margin: 0px 10px;
+        border: none;
+        border-radius: 7px;
+    }
+    
+    .btn-hold .bt1 {
+        background-color: blue;
+        color: white;
+        animation: btn1 6s infinite;
+    }
+    
+    .btn-hold .bt2 {
+        background-color: brown;
+        color: white;
+        animation: btn2 2s infinite;
+    }
+    
+    .btn-hold .bt3 {
+        background-color: darkblue;
+        color: white;
+        animation: btn3 2s infinite;
+    }
+    
+    @keyframes btn1 {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes btn2 {
+        from {
+            transform: scale(0.7);
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+    
+    @keyframes btn3 {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(5px);
+        }
+    }
+</style>
+
+<body>
+
+    <div class="body">
+
+        <header>
+            <h1>Google Search Design</h1>
+            <div class="header-group">
+                <div class="btn1">
+                    <button><i class="fab fa-google-plus-g"></i></button>
+                    <label for="">Gmail</label>
+                </div>
+                <div class="btn1">
+                    <button><i class="fas fa-grip-vertical"></i></button>
+                    <label for="">Menus</label>
+                </div>
+                <div class="btn1">
+                    <button><i class="fas fa-user"></i></button>
+                    <label for="">User Account</label>
+                </div>
+            </div>
+        </header>
+
+        <div class="welcome">
+            <marquee behavior="slow" direction="">
+                <p id="demo"></p>
+            </marquee>
+        </div>
+
+        <div class="body-text">
+            <h1>
+                <font style="color: rgb(17, 111, 148);">G</font>
+                <font style="color: red;">o</font>
+                <font style="color: orange;">o</font>
+                <font style="color: rgb(17, 111, 148);">g</font>
+                <font style="color: green;">l</font>
+                <font style="color: red;">e</font>
+            </h1>
+        </div>
+
+        <div class="search-area">
+            <div class="input-group" id="input-group">
+                <input type="search" id="search" placeholder="Search Google or Type a URL">
+                <div class="bar">
+                    <button onpointerover="label()" onpointerout="labelOut()" onclick="myBtn()"><label for="search"><i class="fab fa-sistrix"></i></label></button>
+                    <label id="label-bar" class="search-label">Search</label>
+                </div>
+            </div>
+
+        </div>
+
+
+        <a href="https://www.whatsapp.com">
+            <div class="web-area">
+                <div class="hold1">
+                    <button><img src="WhatsApp_icon.png" alt="WhatsApp" width="100%"></button>
+                    <a href="https://www.whatsapp.com">WhatsApp</a>
+                </div>
+        </a>
+
+
+        <a href="https://www.facebook.com">
+            <div class="hold1">
+                <button><img src="Facebook_Logo_2023.png" alt="WhatsApp" width="100%"></button>
+                <a href="https://www.facebook.com">Facebook</a>
+
+            </div>
+        </a>
+
+        <a href="https://www.github.com">
+            <div class="hold1">
+                <button><img src="github.png" alt="WhatsApp" width="100%"></button>
+                <a href="https://www.github.com">GitHub.io</a>
+            </div>
+        </a>
+
+        <a href="https://www.waec.com">
+            <div class="hold1">
+                <button><img src="Waec_logo.png" alt="WhatsApp" width="100%"></button>
+                <a href="https://www.waec.com">WAEC Portal</a>
+            </div>
+        </a>
+
+        </div>
+
+        <div class="custom-hold">
+            <i class="fas fa-pen-to-square"></i>
+            <label>Customize</label>
+        </div>
+
+        <footer>
+            <div class="foot-group">
+                <p>Created and Developed By Onyekachi Ebunoha</p>
+                <div class="btn-hold">
+                    <button class="bt1"><i class="fab fa-facebook-f"></i></button>
+                    <button class="bt2"><i class="fab fa-instagram"></i></button>
+                    <button class="bt3"><i class="fab fa-twitter"></i></button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function myBtn() {
+            document.getElementById("input-group").style.width = "100%";
+            document.getElementById("search").style.width = "100%";
+
+            document.getElementById("label").style.display = "none";
+        }
+
+        const date = new Date().getHours();
+        let time = date;
+        if (time < 12) {
+            time = "Hello Good Morning";
+        } else {
+            time = "Hello Good Afternoon";
+        }
+        if (time > 12) {
+            time = "Hello Good Evening";
+        }
+        document.getElementById("demo").innerHTML = time;
+
+
+        const display = new Date().getHours();
+        let clock = display;
+        if (clock < 20) {
+            display = "Good Morning";
+        } else {
+            display = "Good Afternoon";
+        }
+        document.getElementById("time").innerHTML = clock;
+
+        function label() {
+            document.getElementById("label-bar").style.display = "block";
+        }
+
+        function labelOut() {
+            document.getElementById("label-bar").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
